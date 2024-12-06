@@ -1,29 +1,47 @@
-# Campus-Recruitment-Prediction
-This project aims to predict campus placement outcomes for students based on various academic and personal parameters using machine learning techniques. The predictive system leverages algorithms like Linear Regression and Random Forest to analyze features such as SSC percentage, HSC percentage, degree type, work experience, and more, providing valuable insights to enhance placement performance for educational institutions.
+# Campus Recruitment Prediction Web App
 
-Features:
+This is a simple web application built with Streamlit that predicts campus recruitment status and salary based on user-provided features. The project includes a machine learning model for predicting recruitment status and a Random Forest regression model for predicting salary.
 
-1. Data Preprocessing: Cleans and prepares data by handling missing values, encoding categorical variables, and addressing outliers.
-2. Exploratory Data Analysis (EDA): Uses statistical and visualization techniques to identify patterns and trends in placement data.
-3. Feature Engineering: Transforms and creates features to improve model accuracy and predictive power.
-4. Machine Learning Models:
+## Getting Started
 
-  Linear Regression: Serves as a baseline for performance comparison.
-  
-  Random Forest: Acts as the primary predictive model, capturing non-linear relationships effectively.
-  
-5. Evaluation Metrics: Includes MAE, MSE, RMSE, and R² for comprehensive model assessment.
-6. Hyperparameter Tuning: Utilizes grid search and cross-validation to optimize model performance.
-7. Web Application: A user-friendly interface built with Streamlit for real-time placement predictions based on user inputs.
+### Prerequisites
 
-Future Scope:
+- Python 3.x
+- Streamlit
+- scikit-learn
+- joblib (for model loading)
+- pandas (for data manipulation)
 
-1. Enhanced predictive accuracy through advanced feature engineering and algorithm optimization.
-2. Real-time deployment during placement drives for immediate decision-making.
-3. Integration of soft skills evaluation for a more holistic analysis of employability.
-4. Industry-specific prediction models tailored to sector-specific requirements.
+You can install the required Python libraries using pip:
 
-Conclusion:
-This project demonstrates the potential of machine learning in transforming campus placement processes by improving prediction accuracy and decision-making. By leveraging Random Forest and other techniques, institutions can gain actionable insights to maximize student placement success rates.
+```bash
+pip install streamlit scikit-learn joblib pandas
+```
+
+The app will open in your default web browser, allowing you to input data and make predictions.
+
+**Click [here](https://campusplacementrecruitment.streamlit.app/) to use the web application**
+
+## Using the Web Application
+
+1. Select various features such as gender, academic percentages, board, work experience, etc.
+2. Click the "Make Prediction" button.
+3. The app will predict the campus recruitment status and, if placed, will predict the salary based on the input features.
+
+## Files and Structure
+
+  - `app.py`: The Streamlit app that handles user input and displays predictions.
+  - `model.py`: Contains functions to load the machine learning models and make predictions.
+  - `data`: This folder contains csv file use for trainig model.
+  - `models`: This folder contains two joblib files. One is Decision Tree for predicting status of placement and another is approximate salary if **'Placed'**
 
 
+## About Streamlit
+
+[Streamlit](https://streamlit.io/) is an open-source Python library that allows you to create web applications for machine learning and data science projects with minimal effort. It simplifies the process of turning data scripts into shareable web apps.
+
+## Acknowledgments
+
+- This project uses Streamlit for creating the web interface.
+- The machine learning models are built using scikit-learn.
+- The Random Forest regression model is used for salary prediction.
